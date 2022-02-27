@@ -1,0 +1,101 @@
+@media(max-width:800px){
+    #kim{
+		top:70px;
+		left:-200px;
+		transform: rotate(-90deg);
+		position: relative;
+		/*height: 100vh;*/
+		width:170vh;
+		left: -550px;
+
+	}
+
+    .name p{
+    position: relative;
+    left: 500px;
+    top: 20px;
+    font-weight: 900;
+    padding: 0px 20px;
+    font-size: 30px;
+}
+
+
+.pages a{
+    position: relative;
+    color: white;
+    left: 50px;
+    padding: 0px 10px;
+    bottom: 30px;
+    font-weight: 900;
+    
+}
+
+.navbar{
+    position: fixed;
+    transform: rotate(-90deg);
+    z-index: 10;
+    /* position: relative; */
+    bottom: 400px;
+    left: -220px;
+    /* border-bottom:1px solid white; */
+}
+
+.navbar::before{
+    content: "";
+    display: block;
+    background-color: white;
+    width: 1px;
+    height: 120vh;
+    position: absolute;
+    transform: rotate(-90deg);
+    top: -310px;
+    left: 300px;
+}
+.home{
+    height: 100vh;
+}
+}
+
+                <h2><a href="#">.Data Science</a></h2>
+                <h2><a href="#">.Python</a></h2>
+                <h2><a href="#">.Html Css</a></h2>
+                <h2><a href="#">.Android (Java/Kotlin)</a></h2>
+                <h2><a href="#">.Ethical Hacking</a></h2>
+                <h2><a href="#">.Digital Media</a></h2>
+                
+
+                <section class="kim">
+                        <div class="container">
+                            <div class="row">
+                                <div class=" col-xs-12 col-sm-12 col-md-6 col-lg-6 ">
+                                    <blockquote class="blockquote">
+                                        <p>Where is Zalego located</p>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, reprehenderit.</p>
+                                        <footer>review by <cite title="Peter kimanzi">Peter Kimanzi</cite></footer>
+                                    </blockquote>                                    
+                                </div>    
+                                <div class=" col-xs-12 col-sm-12 col-md-6 col-lg-6 ">
+                                    <blockquote class="blockquote">
+                                        <p>Where is Zalego located</p>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, reprehenderit.</p>
+                                        <footer>review by <cite title="Peter kimanzi">Peter Kimanzi</cite></footer>
+                                    </blockquote>                                    
+                                </div>    
+                                <div class=" col-xs-12 col-sm-12 col-md-6 col-lg-6 ">
+                                    <blockquote class="blockquote">
+                                        <p>Where is Zalego located</p>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, reprehenderit.</p>
+                                        <footer>review by <cite title="Peter kimanzi">Peter Kimanzi</cite></footer>
+                                    </blockquote>                                    
+                                </div>   
+
+                                <div class=" col-xs-12 col-sm-12 col-md-6 col-lg-6 ">
+                                    <blockquote class="blockquote">
+                                        <p>Where is Zalego located</p>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, reprehenderit.</p>
+                                        <footer>review by <cite title="Peter kimanzi">Peter Kimanzi</cite></footer>
+                                    </blockquote>                                    
+                                </div>   
+                            </div>    
+                        </div>
+                    </section>        
