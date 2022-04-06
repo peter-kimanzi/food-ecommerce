@@ -1,4 +1,5 @@
-
+# food-ecommerce
+a website to sell food products
 
 ## technologies used
 * HTML
