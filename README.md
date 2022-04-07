@@ -7,6 +7,6 @@ a website to sell food products
 * JQuery
 * JavaScript
 
-## view the website here  
+##£ view the website here  
 
 https://peter-kimanzi.github.io/food-ecommerce/
