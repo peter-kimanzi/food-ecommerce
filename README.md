@@ -13,6 +13,7 @@ download zip or clone repo (all required files are included)
 
 ### view the website here  
 
+https://peter-kimanzi.github.io/food-ecommerce/
 
 
 # Enjoy!
