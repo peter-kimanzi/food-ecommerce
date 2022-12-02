@@ -18,3 +18,4 @@ https://peter-kimanzi.github.io/food-ecommerce/
 
 
 ## Screenshots
+![foody](https://user-images.githubusercontent.com/71552773/205292439-432dc63d-d6a9-4f1b-aacb-b72d10f80151.PNG)
