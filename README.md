@@ -1,5 +1,4 @@
 # food-ecommerce
-
 A website to sell food products online
 
 * mobile friendly
