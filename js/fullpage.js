@@ -103,7 +103,7 @@
         if(hasClass($html, ENABLED)){ displayWarnings(); return; }
 
         var FP = {};
-
+        const [state,useState]= useState("")
         // Creating some defaults, extending them with any options that were provided
         options = deepExtend({
             //navigation
