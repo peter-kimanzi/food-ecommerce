@@ -17,7 +17,7 @@ download zip or clone repo (all required files are included)
 https://peter-kimanzi.github.io/food-ecommerce/
 
 
-## Screenshots.
+## Screenshots
 
 ![foody2](https://user-images.githubusercontent.com/71552773/205292467-c0c82227-eb98-4f2c-ad01-6ac64232dac4.PNG)
 
