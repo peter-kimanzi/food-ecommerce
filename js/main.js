@@ -1,88 +1,78 @@
-// back tot top
+// Back to top button functionality
+const backToTopBtn = document.querySelector('.back-to-top');
 
-let backToTopBtn = document.querySelector('.back-to-top')
+const toggleBackToTopBtn = () => {
+  if (window.scrollY > 200) {
+    backToTopBtn.style.display = 'flex';
+  } else {
+    backToTopBtn.style.display = 'none';
+  }
+};
 
-window.onscroll = () => {
-    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-        backToTopBtn.style.display = 'flex'
+window.addEventListener('scroll', toggleBackToTopBtn);
+
+// Top navigation menu functionality
+const menuItems = document.querySelectorAll('.menu-item');
+
+menuItems.forEach((item) => {
+  item.addEventListener('click', (e) => {
+    const activeMenu = document.querySelector('.menu-item.active');
+    if (activeMenu) activeMenu.classList.remove('active');
+    e.currentTarget.classList.add('active');
+  });
+});
+
+// Food category filter functionality
+const foodMenuList = document.querySelector('.food-item-wrap');
+const foodCategoryButtons = document.querySelectorAll('.food-category button');
+
+foodCategoryButtons.forEach((button) => {
+  button.addEventListener('click', (e) => {
+    const activeButton = document.querySelector('.food-category button.active');
+    if (activeButton) activeButton.classList.remove('active');
+    e.currentTarget.classList.add('active');
+
+    const foodType = e.currentTarget.getAttribute('data-food-type');
+    foodMenuList.className = `food-item-wrap ${foodType}`;
+  });
+});
+
+// On scroll animation functionality
+const elToShow = document.querySelectorAll('.play-on-scroll');
+
+const isElInViewPort = (el) => {
+  const rect = el.getBoundingClientRect();
+  const viewHeight = window.innerHeight || document.documentElement.clientHeight;
+  return (
+    (rect.top <= 0 && rect.bottom >= 0) ||
+    (rect.bottom >= viewHeight && rect.top <= viewHeight) ||
+    (rect.top >= 0 && rect.bottom <= viewHeight)
+  );
+};
+
+const animateOnScroll = () => {
+  elToShow.forEach((item) => {
+    if (isElInViewPort(item)) {
+      item.classList.add('start');
     } else {
-        backToTopBtn.style.display = 'none'
+      item.classList.remove('start');
     }
-}
+  });
 
-// top nav menu
+  requestAnimationFrame(animateOnScroll);
+};
 
-let menuItems = document.getElementsByClassName('menu-item')
+animateOnScroll();
 
-Array.from(menuItems).forEach((item, index) => {
-    item.onclick = (e) => {
-        let currMenu = document.querySelector('.menu-item.active')
-        currMenu.classList.remove('active')
-        item.classList.add('active')
-    }
-})
-
-// food category
-
-let foodMenuList = document.querySelector('.food-item-wrap')
-
-let foodCategory = document.querySelector('.food-category')
-
-let categories = foodCategory.querySelectorAll('button')
-
-Array.from(categories).forEach((item, index) => {
-    item.onclick = (e) => {
-        let currCat = foodCategory.querySelector('button.active')
-        currCat.classList.remove('active')
-        e.target.classList.add('active')
-        foodMenuList.classList ='food-item-wrap '+ e.target.getAttribute('data-food-type')
-    }
-})
-
-// on scroll animation
-
-let scroll = window.requestAnimationFrame || function(callback) {window.setTimeout(callback, 1000/60)}
-
-let elToShow = document.querySelectorAll('.play-on-scroll')
-
-isElInViewPort = (el) => {
-    let rect = el.getBoundingClientRect()
-
-    return (
-        (rect.top <= 0 && rect.bottom >= 0)
-        ||
-        (rect.bottom >= (window.innerHeight || document.documentElement.clientHeight) && rect.top <= (window.innerHeight || document.documentElement.clientHeight))
-        ||
-        (rect.top >= 0 && rect.bottom <= (window.innerHeight || document.documentElement.clientHeight))
-    )
-}
-
-loop = () => {
-    elToShow.forEach((item, index) => {
-        if (isElInViewPort(item)) {
-            item.classList.add('start')
-        } else {
-            item.classList.remove('start')
-        }
-    })
-
-    scroll(loop)
-}
-
-loop()
-
-// mobile nav
-
-let bottomNavItems = document.querySelectorAll('.mb-nav-item')
-
-let bottomMove = document.querySelector('.mb-move-item')
+// Mobile navigation functionality
+const bottomNavItems = document.querySelectorAll('.mb-nav-item');
+const bottomMove = document.querySelector('.mb-move-item');
 
 bottomNavItems.forEach((item, index) => {
-    item.onclick = (e) => {
-        console.log('object')
-        let crrItem = document.querySelector('.mb-nav-item.active')
-        crrItem.classList.remove('active')
-        item.classList.add('active')
-        bottomMove.style.left = index * 25 + '%'
-    }
-})
+  item.addEventListener('click', (e) => {
+    const activeItem = document.querySelector('.mb-nav-item.active');
+    if (activeItem) activeItem.classList.remove('active');
+    e.currentTarget.classList.add('active');
+    bottomMove.style.left = `${index * 25}%`;
+  });
+});
